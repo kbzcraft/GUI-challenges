@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Dialog GuiChallenge</title>
+  </head>
+  <body>
+    <dialog id="dialog-addUser" open>
+      <header>
+        <div>
+          <i>
+            <svg
+              style="
+                stroke: var(--color-wNb);
+                fill: none;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              "
+              aria-hidden="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <line x1="20" y1="8" x2="20" y2="14"></line>
+              <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+          </i>
+          <h1>New User</h1>
+        </div>
+        <button class="esc">x</button>
+      </header>
+      <section>
+        <div>
+          <label for="imgInput">Upload an image</label>
+          <input id="imgInput" type="file" accept="image/*" />
+        </div>
+        <p class="info">Maximum size 1MB</p>
+      </section>
+      <footer>
+        <button class="clear">Clear</button>
+        <div>
+          <button class="cancel">Cancel</button>
+          <button class="confirm">Confirm</button>
+        </div>
+      </footer>
+    </dialog>
+
+    <dialog id="dialog-delete">
+      <div
+        style="
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          gap: 20px;
+          padding: 15px 25px;
+          background-color: #343a40;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+        "
+      >
+        <i>
+          <svg
+            style="
+              stroke: var(--color-wNb);
+              fill: none;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+            "
+            aria-hidden="true"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <title>A warning icon</title>
+            <path
+              d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+            ></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </i>
+        <p class="warning">Are You sure you want to remove this user?</p>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 20px;
+          padding: 20px 20px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        "
+      >
+        <button class="cancel">Cancel</button>
+        <button class="confirm" id="delete">Confirm</button>
+      </div>
+    </dialog>
+
+    <section class="section-userCards">
+      <div class="userCard">
+        <img
+          src="https://doodleipsum.com/200x200/avatar-5?i=dc167f443cf59f78c586a30fbd0bdaca"
+          alt=" "
+        />
+        <button>X</button>
+      </div>
+      <div class="userCard">
+        <img
+          src="https://doodleipsum.com/150x150/avatar-5?i=279aba33eb51572d3fd8ef281a6297c4"
+          alt=" "
+        />
+        <button>X</button>
+      </div>
+    </section>
+    <div id="createUser">
+      <button style="all: unset; font-size: 50px">+</button>
+    </div>
+  </body>
+</html>
